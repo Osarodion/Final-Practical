@@ -43,6 +43,15 @@ public class ClipTest {
     @Test
     public void testSetTitleToEmptyStringKeepsPreviousValue()
     {
+        System.out.println("testSetTitleToEmptyStringKeepsPreviousValue");
+        Clip instance = new Clip();
+        String InitialTitle = "Original Title";
+        instance.setTitle(InitialTitle); // try to set Empty Title
+        String EmptyTitle = " ";
+        instance.setTitle(EmptyTitle);              // try to set Empty Title
+        String ModifiedTitle = instance.getTitle(); // check Empty Title is set or not 
+        assertTrue(InitialTitle.equals(ModifiedTitle));// compare original title and resulted title
+        System.out.println("Empty Title not set");
     }
 
     @Test
