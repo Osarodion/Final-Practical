@@ -340,12 +340,23 @@ public class MediaControl extends VBox {
             }
         });
         
-        //moves the selected item bac
+        //moves the selected item back
         final Button btnNudgeSelectedStartBack = new Button("<<");
         btnNudgeSelectedStartBack.setTooltip(new Tooltip("Nudge Selected Back"));
         btnNudgeSelectedStartBack.setStyle("-fx-max-width:infinity");
         btnNudgeSelectedStartBack.setOnAction(new EventHandler<ActionEvent>() {
             public void handle(ActionEvent e) {
+                
+                Clip p = table.getSelectionModel().getSelectedItem();
+                if (p==null) return;
+                
+                int currentPos = p.getStart();
+                int reducedPosition = currentPos - 1;
+                
+                p.setStart(reducedPosition);
+
+                doTableRefresh(table);
+                
             }
         });
         final Button btnNudgeSelectedStartForward = new Button(">>");
