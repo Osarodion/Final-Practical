@@ -80,6 +80,21 @@ public class ClipTest {
     @Test
     public void testEqualsOnEqualClips() 
     {
+       System.out.println("Will not create a duplicate video");
+       String SubTitle1 = "Sub video 1"; //Create first sub video clip
+       Clip subClip1 = new Clip(SubTitle1,4,30); // First sub clip
+       
+       Clip subClip2 = new Clip();// Second sub ciip
+       String SubTitle2 = "Sub video 1"; //Create second sub video clip 
+       subClip2.setTitle(SubTitle2);   // Set Ttile
+       
+       subClip2.setStart(4);//Set start time to sub video from 4th sec 
+       subClip2.setEnd(30);// set end time to sub video at 30th second
+       
+       boolean DuplicateClip = subClip1.equals(subClip2); 
+       
+       assertEquals(true,DuplicateClip); // its a identical video
+       System.out.println("Identical video");
     }
     
     @Test
