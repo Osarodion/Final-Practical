@@ -100,6 +100,7 @@ public class ClipTest {
     @Test
     public void testEqualsOnNonEqualClips() 
     {
+        
     }
     
     @Test
@@ -112,6 +113,18 @@ public class ClipTest {
     {    
     }
     
+     
+@Test
+     public void testUpperCase(){
+         System.out.println("setTitle");
+         String LowerCase= "title";
+         String ExpectedTitle = "TITLE";
+         Clip instance = new Clip(LowerCase,10,60);// lower case title
+         String CurrentTitle = instance.getTitle(); // get current title
+         instance.setTitle(CurrentTitle.toUpperCase());// convert to upper case
+         String ModifiedTitle =  instance.getTitle(); // get modified title
+         assertTrue(ExpectedTitle.equals(ModifiedTitle));
+     }
     
     
 }

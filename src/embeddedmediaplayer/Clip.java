@@ -50,6 +50,10 @@ return title.get();
 public void setTitle(String s) {
 if (s==null) return;
 if (s=="") return;
+
+
+if (s==" ") return;
+
 title.set(s);
 }
 
@@ -64,6 +68,9 @@ public void setStart(Integer start) {
     if (start<0) return;
     if (end.get()>0 && start>end.get()) return;
     if (start>max.get()) return;
+    
+    if (start==end.get()) return;
+
     this.start.set(start);
 }
 

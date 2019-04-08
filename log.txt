@@ -1,0 +1,35 @@
+commit 4b4991c2dd123d574e91290a1e29cfebbde2bc95
+Author: mo18abp <mo18abp@ENT-D410-16.herts.ac.uk>
+Date:   Mon Apr 8 13:54:13 2019 +0100
+
+    Added nudge selected start back
+
+commit 05dd11640d43758a870940bc2d94c0222ee488e6
+Author: mo18abp <mo18abp@ENT-D410-16.herts.ac.uk>
+Date:   Mon Apr 8 13:42:55 2019 +0100
+
+    Added upper case button
+
+commit b3069e581fca4a3a9191075f53fdf995a0f705b9
+Author: mo18abp <mo18abp@ENT-D410-16.herts.ac.uk>
+Date:   Mon Apr 8 13:24:09 2019 +0100
+
+    Added testEqualsOnEqualClips
+
+commit f92a450f6e25666e937180719da3d6c85318e4c7
+Author: mo18abp <mo18abp@ENT-D410-16.herts.ac.uk>
+Date:   Mon Apr 8 13:21:02 2019 +0100
+
+    Added testSetEndBeforeStartKeepsPreviousValue
+
+commit 69b3274e48ef935566f7ce84356d90ddb7e1b2d4
+Author: mo18abp <mo18abp@ENT-D410-16.herts.ac.uk>
+Date:   Mon Apr 8 13:14:54 2019 +0100
+
+    Added testSetTitleToEmptyStringKeepsPreviousValue
+
+commit 46974bdf04c94bf19816b56aa24bb34e0f08f561
+Author: mo18abp <mo18abp@ENT-D410-16.herts.ac.uk>
+Date:   Mon Apr 8 13:08:16 2019 +0100
+
+    Initial commit
