@@ -116,7 +116,8 @@ public class ClipTest {
      
 @Test
      public void testUpperCase(){
-         System.out.println("setTitle");
+         System.out.println("testUpperCase");
+         
          String LowerCase= "title";
          String ExpectedTitle = "TITLE";
          Clip instance = new Clip(LowerCase,10,60);// lower case title
@@ -126,5 +127,23 @@ public class ClipTest {
          assertTrue(ExpectedTitle.equals(ModifiedTitle));
      }
     
+     
+ @Test
+     public void ReduceAndIncreasetime(){
+         System.out.println("ReduceAndIncreasetime");
+         
+         String Title = "title";
+         int OriginalStartTime = 10; // clip start time
+         int originalEndtime = 50;// clip end time
+         Clip instance = new Clip(Title,OriginalStartTime,originalEndtime);
+         instance.setStart(OriginalStartTime - 1 );//Reducing one sec
+         instance.setEnd(originalEndtime + 1);// set end time to sub video at 50th second
+         int ExpectedStartTime = 9;
+         int ExpectedEndTime = 51;
+         int ModifiedStartTime = instance.getStart();
+         int ModifiedEndTime = instance.getEnd(); //Get endtime of the video 
+         assertTrue((ExpectedStartTime==ModifiedStartTime) && (ExpectedEndTime==ModifiedEndTime));
+         System.out.println("One second reduced in start time and one second increased in end time of the clip");
+     }      
     
 }
